@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .forms import RegForm
-
+#13 13 13 13 13#
 # Create your views here.
 def inicio(request):
 	form = RegForm(request.POST or None)
