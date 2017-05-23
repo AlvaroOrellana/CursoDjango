@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'boletin'
 ]
 
@@ -60,6 +61,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'pd110.urls'
+
+CRISPY_TEMPLATE_PACK = 'boostrap3'
 
 TEMPLATES = [
     {
