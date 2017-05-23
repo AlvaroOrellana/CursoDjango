@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^$', views.inicio, name='inicio'),
     url(r'^about/$', about, name='about'),
+    url(r'^accounts/$', include('registration.backends.default.urls'))
 ]
 
 if settings.DEBUG:

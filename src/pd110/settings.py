@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'boletin'
+    'boletin',
+    'registration',
+    'django.contrib.sites'
 ]
 
 MIDDLEWARE = [
@@ -62,6 +64,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pd110.urls'
 
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
 CRISPY_TEMPLATE_PACK = 'boostrap3'
 
 TEMPLATES = [
