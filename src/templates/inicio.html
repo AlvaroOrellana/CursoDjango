@@ -1,3 +1,13 @@
+{% extends "base.html" %}
+
+{% block head_title %}Bienvenidos | {{block.super}}{% endblock %}
+
+{% block jumbotron_content %}
+<h1> INICIO</h1>
+
+{% endblock %}
+
+
 
 {{ titulo }}<br/>
 {{ request.user }}<br/>
@@ -9,3 +19,4 @@
 {{ el_form.as_p }}
 <input type="submit" value="Registrame"/>
 </form>
+{% endblock %}
