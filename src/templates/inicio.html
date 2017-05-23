@@ -22,20 +22,20 @@
 <br/>
 <div class="row">
 <div class="col-sm-3 pull-right">
-<p class='lead'> {{ titulo }}</p>
+<p class='lead text-align-center'> {{ titulo }}</p>
 <form method="POST" action="">{% csrf_token %}
 {{ el_form|crispy }}
-<input type="submit" value="Registrame"/>
+<input type="submit" value="Inscribirse"/>
 </form>
 </div>
 <div class ='col-sm-3'>
-<p class='lead'>PAKITO</p>
+<p class='lead text-align-center'>PAKITO</p>
 </div>
 <div class ='col-sm-3'>
-<p class='lead'>PAKITO 2</p>
+<p class='lead text-align-center'>PAKITO 2</p>
 </div>
 <div class ='col-sm-3'>
-<p class='lead'>PAKITO 3</p>
+<p class='lead text-align-center'>PAKITO 3</p>
 </div>
 </div>
 {% endblock %}
