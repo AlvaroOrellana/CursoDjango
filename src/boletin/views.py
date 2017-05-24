@@ -39,8 +39,9 @@ def inicio(request):
 		"el_form": form,
 	}
 	if request.user.is_authenticated() and request.user.is_staff:
+		queryset = Registrado.objects.all().order_by("-timestamp")
 		context = {
-			"queryset": ['abc','123'],
+			"queryset": queryset,
 		}
 	return render(request, "inicio.html", context)
 
