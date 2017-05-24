@@ -38,6 +38,10 @@ def inicio(request):
 		"titulo": titulo,
 		"el_form": form,
 	}
+	if request.user.is_authenticated() and request.user.is_staff:
+		context = {
+			"queryset": ['abc','123'],
+		}
 	return render(request, "inicio.html", context)
 
 def contact(request):

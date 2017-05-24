@@ -16,6 +16,9 @@
 {% endblock %}
 </style>
 {% block jumbotron %}
+{% if request.user.is_staff %}
+{{ queryset }}
+{% else %}
 <div class="jumbotron">
 <div classe="container">
 <div class='row'>
@@ -26,23 +29,25 @@
 </div>
 </div>
 </div>
-
+{% endif %}
 {% endblock %}
 
 
 
-{{ titulo }}<br/>
-{{ request.user }}<br/>
-
-<hr/>
-<br/>
+{% block content %}
+{% if not request.user.is_staff %}
 <div class="row">
 <div class="col-sm-3 pull-right">
-<p class='lead text-align-center'> {{ titulo }}</p>
+{% if not user.is_authenticated %}
+<p class='lead text-align-center'>Suscribirte</p>
 <form method="POST" action="">{% csrf_token %}
 {{ el_form|crispy }}
-<input type="submit" value="Inscribirse"/>
+<input type="submit" value="Enviar"/>
 </form>
+{% else %}
+<p class='lead text-align-center'> {{ titulo }}<br/><br/><br/></p>
+<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+{% endif %}
 </div>
 <div class ='col-sm-3'>
 <p class='lead text-align-center'>PAKITO<br/><br/><i class="fa fa-bullhorn fa-5x" aria-hidden="true"></i></p>
@@ -58,4 +63,5 @@
 </p>
 </div>
 </div>
+{%endif%}
 {% endblock %}
