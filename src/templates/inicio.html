@@ -7,6 +7,11 @@
 {% block style %}
 .jumbotron {
 	background-color: #172548 !important;
+	color: #FFF !important;
+}
+
+.fa-5x {
+	font-size: 15em !important;
 }
 {% endblock %}
 </style>
@@ -40,13 +45,17 @@
 </form>
 </div>
 <div class ='col-sm-3'>
-<p class='lead text-align-center'>PAKITO</p>
+<p class='lead text-align-center'>PAKITO<br/><br/><i class="fa fa-bullhorn fa-5x" aria-hidden="true"></i></p>
 </div>
 <div class ='col-sm-3'>
 <p class='lead text-align-center'>PAKITO 2</p>
+<img src={'% static "img/obama_tacos.jpg" %}'>
 </div>
 <div class ='col-sm-3'>
-<p class='lead text-align-center'>PAKITO 3</p>
+<p class='lead text-align-center'>PAKITO 3<br/><br/><span class="fa-stack fa-5x" aria-hidden="true"></span>
+<i class="fa fa-square-o fa-stack-2x"></i>
+<i class="fa fa-twitter fa-stack-1x"></i>
+</p>
 </div>
 </div>
 {% endblock %}
